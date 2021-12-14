@@ -1,0 +1,14 @@
+{% extends 'book/origin.html' %}
+{% load static %}
+
+{% block title %}Books:{% endblock %}
+
+{% block content %}
+
+<form class="create" action="." method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input class="addbtn" type="submit" value="Добавить" />
+</form>
+
+{% endblock %}

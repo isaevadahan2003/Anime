@@ -1,0 +1,11 @@
+{% extends 'book/origin.html' %}
+{% load static %}
+
+{% block title %}Book{% endblock %}
+
+{% block content %}
+    <form action="." method="POST">{% csrf_token %}
+        <h1 class="delete">Вы хотите удалить книгу? "{{ object.title }}"</h1>
+        <p class="yes"><input type="submit" value="Подтвердить"> <a href="../">Отмена</a></p>
+    </form>
+{% endblock %}
